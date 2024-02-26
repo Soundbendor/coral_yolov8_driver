@@ -48,7 +48,7 @@ def label_to_color_image(label):
 
 urllib.request.urlretrieve('https://ultralytics.com/images/bus.jpg', 'bus.jpg')
 wd = os.getcwd()
-model_file = os.path.join(wd, 'model.tflite')
+model_file = os.path.join(wd, 'model_edgetpu.tflite')
 sample_img = os.path.join(wd, 'bus.jpg')
 
 interpreter = edgetpu.make_interpreter(model_file)

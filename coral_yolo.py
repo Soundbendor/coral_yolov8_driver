@@ -55,7 +55,7 @@ interpreter = edgetpu.make_interpreter(model_file)
 interpreter.allocate_tensors()
 
 size = common.input_size(interpreter)
-image = Image.open(sample_img).convert('RGB').resize(size, Image.ANTIALIAS)
+image = Image.open(sample_img).convert('RGB').resize(size)
 
 common.set_input(interpreter, image)
 interpreter.invoke()
